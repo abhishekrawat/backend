@@ -4,7 +4,7 @@ import Image from "next/image";
 // import EmblaCarousel from './EmblaCarousel'
 // import { EmblaOptionsType } from 'embla-carousel'
 // import { useState, useEffect, useCallback } from "react";
-// import Link from "next/link";
+import Link from "next/link";
 // import { Button, Heading } from "@medusajs/ui"
 // import './embla.css'
 
@@ -24,14 +24,15 @@ import Image from "next/image";
 const Hero = () => {
   return (
     <>
-      {/* <EmblaCarousel slides={SLIDES} options={OPTIONS} /> */}
-      <Image
-        className="content-container"
-        src="https://picsum.photos/1600/900"
-        width={1600}
-        height={900}
-        alt="Picture of the author">
-      </Image>
+      <Link href="/">
+        <Image
+          className="content-container"
+          src="https://picsum.photos/1600/900"
+          width={1600}
+          height={900}
+          alt="Hero Banner">
+        </Image>
+      </Link>
 
     </>
   )

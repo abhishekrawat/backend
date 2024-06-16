@@ -1,9 +1,10 @@
 import { Suspense } from "react"
-
+import Image from "next/image";
 import { listRegions } from "@lib/data"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import CartButton from "@modules/layout/components/cart-button"
 import SideMenu from "@modules/layout/components/side-menu"
+import ciyona_logo from "../../../../app/ciyona_logo.svg"
 
 export default async function Nav() {
   const regions = await listRegions().then((regions) => regions)
@@ -24,7 +25,12 @@ export default async function Nav() {
               className="txt-compact-xlarge-plus hover:text-ui-fg-base uppercase"
               data-testid="nav-store-link"
             >
-              Ciyona Studio
+              <Image
+                className=""
+                src={ciyona_logo}
+                width={120}
+                alt="CIYONA">
+              </Image>
             </LocalizedClientLink>
           </div>
 
