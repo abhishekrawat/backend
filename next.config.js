@@ -4,7 +4,10 @@ const store = require("./store.config.json")
 /**
  * @type {import('next').NextConfig}
  */
+
+
 const nextConfig = withStoreConfig({
+  
   features: store.features,
   reactStrictMode: true,
   images: {
@@ -28,6 +31,10 @@ const nextConfig = withStoreConfig({
       {
         protocol: "https",
         hostname: "picsum.photos",
+      },
+      {
+        protocol: "http",
+        hostname: "5.75.234.8",
       }
     ],
   },
